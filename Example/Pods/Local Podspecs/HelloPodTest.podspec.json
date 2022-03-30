@@ -20,7 +20,7 @@
   },
   "preserve_paths": "LBBeforeCompilingProject",
   "script_phases": {
-    "name": "Hello World",
+    "name": "[LB]Check Project Complete",
     "script": "  \"${PODS_TARGET_SRCROOT}/LBBeforeCompilingProject\"\n  result=$?\n  echo $result\n  if [[ ${result} == '0' ]]\n  then\n  exit 1\n  fi\n",
     "execution_position": "before_compile"
   }
