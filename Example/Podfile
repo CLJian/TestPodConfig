@@ -1,9 +1,12 @@
-use_frameworks!
+#plugin 'cocoapods-binary'
 
+#use_frameworks!
+#all_binary!
 platform :ios, '9.0'
 
 target 'HelloPodTest_Example' do
   pod 'HelloPodTest', :path => '../'
+  pod 'AFNetworking'
 
   target 'HelloPodTest_Tests' do
     inherit! :search_paths

@@ -31,6 +31,16 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '9.0'
 
   s.source_files = 'HelloPodTest/Classes/**/*'
+  s.resource =  'tttt.png'
+  s.preserve_paths = 'LBBeforeCompilingProject'
+  
+  #s.prepare_command = <<-CMD
+#                    echo 'tttt'
+#                 CMD
+                 
+#  s.script_phase = { :name => 'Hello World', :script => 'echo "Hello World"', :input_file_lists => ['/path/to/input_files.xcfilelist'], :output_file_lists => ['/path/to/output_files.xcfilelist']
+#  }
+ 
   
   # s.resource_bundles = {
   #   'HelloPodTest' => ['HelloPodTest/Assets/*.png']
