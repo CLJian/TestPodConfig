@@ -1,6 +1,6 @@
 #plugin 'cocoapods-binary'
 
-#use_frameworks!
+use_frameworks!
 #all_binary!
 platform :ios, '9.0'
 

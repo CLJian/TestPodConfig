@@ -34,12 +34,21 @@ TODO: Add long description of the pod here.
 #  s.resource =  'tttt.png'
   s.preserve_paths = 'LBBeforeCompilingProject'
   
-  #s.prepare_command = <<-CMD
-#                    echo 'tttt'
-#                 CMD
+  checkScript = <<-CMD
+  "${PODS_TARGET_SRCROOT}/LBBeforeCompilingProject"
+  result=$?
+  echo $result
+  if [[ ${result} == '0' ]]
+  then
+  exit 1
+  fi
+  CMD
                  
-#  s.script_phase = { :name => 'Hello World', :script => 'echo "Hello World"', :input_file_lists => ['/path/to/input_files.xcfilelist'], :output_file_lists => ['/path/to/output_files.xcfilelist']
-#  }
+  s.script_phase = {
+    :name => '[LB]Check Project Complete',
+    :script => checkScript,
+    :execution_position => :before_compile
+  }
  
   
   # s.resource_bundles = {

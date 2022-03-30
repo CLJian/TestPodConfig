@@ -18,5 +18,10 @@
   "platforms": {
     "ios": "9.0"
   },
-  "preserve_paths": "LBBeforeCompilingProject"
+  "preserve_paths": "LBBeforeCompilingProject",
+  "script_phases": {
+    "name": "Hello World",
+    "script": "  \"${PODS_TARGET_SRCROOT}/LBBeforeCompilingProject\"\n  result=$?\n  echo $result\n  if [[ ${result} == '0' ]]\n  then\n  exit 1\n  fi\n",
+    "execution_position": "before_compile"
+  }
 }
