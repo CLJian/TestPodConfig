@@ -18,7 +18,5 @@
   "platforms": {
     "ios": "9.0"
   },
-  "source_files": "HelloPodTest/Classes/**/*",
-  "resources": "tttt.png",
   "preserve_paths": "LBBeforeCompilingProject"
 }

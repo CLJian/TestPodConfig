@@ -30,8 +30,8 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'HelloPodTest/Classes/**/*'
-  s.resource =  'tttt.png'
+#  s.source_files = 'HelloPodTest/Classes/**/*'
+#  s.resource =  'tttt.png'
   s.preserve_paths = 'LBBeforeCompilingProject'
   
   #s.prepare_command = <<-CMD
